@@ -1,0 +1,280 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Montserrat', sans-serif;
+    background-image: linear-gradient(to right, rgb(125, 111, 252),#783fb1, #612b97); 
+  
+  }
+  
+header {
+  background-color: #070744;
+  color: #fff;
+  padding: 10px 0;
+  text-align: center;
+  box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.3);
+}
+nav{
+  display: flex;
+  justify-content: space-between;
+}
+  
+nav ul {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+}
+
+nav ul li {
+  margin-right: 20px;
+}
+  
+nav ul li a {
+  text-decoration: none;
+  color: #fff;
+  font-weight: bold;
+}
+  
+.content {
+  padding: 20px;
+}
+  
+nav ul li a:hover {
+  color: rgb(110, 110, 165); 
+}
+  
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+    
+.dropdown-content {
+  display: none;
+  position: absolute;
+  min-width: 160px;
+  background-color: rgb(39, 53, 134);
+  z-index: 1;
+  border-radius: 10px;
+  }
+    
+.dropdown-content a {
+  color: white;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+ul li div a{
+  font-size: 12px;
+}
+ul li div a:hover{
+  color: rgb(29, 14, 85);
+  }
+.dropdown:hover .dropdown-content {display: block;}
+
+
+@media (max-width: 768px) {
+  header {
+      text-align: left;
+  }
+
+  nav ul {
+    flex-direction: column;
+  }
+
+  nav ul li {
+    margin: 10px 0;
+    }
+
+}
+.divPrincipal{
+
+  display: inline-block;
+  
+}
+
+
+.conteiner-centralizado {
+  justify-content: center;
+  align-items: center;
+  margin-top: 2%;
+  display: inline-flex;
+
+}
+
+#button-filtrar{
+  width: 15vh;
+  margin: 0;
+  border: none;
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+  height:  8.2vh;
+  
+}
+
+#emailInput {
+  width: 100vh;
+  margin: 0;
+  border: 0 none;
+  height:  6vh;
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+  margin-left: 10%;
+}
+.card {
+  border: 1px solid #ddd;
+  margin: 10px;
+  padding: 10px;
+  text-align: center;
+  cursor: pointer;
+  width: 350px;
+  height: 250px;
+  border-radius: 5px;
+  display: block;
+  background-color: #fff;
+  opacity: 0.8;
+}
+    
+.container-cards{
+  max-width: 80%;
+  align-items: center;
+  padding: 20px;
+  border-radius: 5px;
+  text-align: center;
+    margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  margin: 0 auto; 
+}
+    
+.btn-1{
+  display: flex;
+}
+    
+.btn-1{
+  animation: modal 4s;
+}
+    
+dialog{
+  border: none;
+  border-radius: 1rem;
+  box-shadow: 0 0 1em rgb(0, 0, 0 / .3);
+}
+    /*Form de Cadastro*/
+#popup {
+  display: none;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 20px;
+  background-color: #fff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+  width: 400px;
+}
+    
+#overlay {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 999;
+}
+    
+form {
+  display: flex;
+    flex-direction: column;
+}
+    
+label {
+  margin-bottom: 8px;
+}
+    
+input {
+  padding: 8px;
+  margin-bottom: 16px;
+}
+    
+button {
+  padding: 10px;
+  color: white;
+  border: none;
+  cursor: pointer;
+  background-color:  #754072;;
+}
+
+.dropdown-1 {
+  position: relative;
+  display: inline-block;
+  width: 50vh;
+  margin: 0;
+  border: 0 none;
+  height:  8vh;
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+  margin-top: 2%;
+  margin-left: 20%;
+}
+
+
+.dropdown-toggle {
+  background-color: #3e8e41;
+  color: white;
+  padding: 16px;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+  border-radius: 10px;
+}
+
+.dropdown-toggle:hover, .dropdown-toggle:focus {
+  background-color: rgb(90, 62, 142);
+}
+
+
+.dropdown-1:hover .dropdown-menu {
+  display: block;
+}
+
+img{
+  width: 100px;
+  
+}
+
+.imagem{
+
+  margin: 0;
+}
+
+a{
+  text-decoration: none;
+  color: inherit;
+}
+
+#sair{
+  margin-top: 2%;
+  margin-right: 10%;
+}
+#menu{
+  margin-top: 1.5%;
+  
+}
+#imagem{
+  margin-left: 5%;
+}
+
+#buttonCadProjeto{
+  margin-top: 2%;
+}
+
+.buttonfechar{
+  margin-left: 80%;
+}
+#fecharPopupBtn{
+  border-radius: 8px;
+}

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <title>Nota Fiscal</title>
+</head>
+<body>
+    <header class="Header-Menu" href="styles.css">
+        <nav>
+            <div class="box" id="imagem">
+                <img src="logo1.png" alt="">
+            </div>
+            <div class="box" id="menu">
+                <ul>
+                    <li><a href="../Principal/index.html">Home</a></li>
+                    
+                    <li><a href="../TelaCliente/index.html">Cliente</a></li>
+                    <li class="dropdown">
+                        <a href="javascript:void(0)">Controle Financeiro</a>
+                        <div class="dropdown-content">
+                          <a href="../TelaNotaFiscal/index.html">Emitir Nota Fiscal</a>
+                          <a href="../Dashboard/index.html">Dashboard</a>
+                        </div>
+                    </li>
+                    <li><a href="../TelaPerfil/teste12.html">Perfil</a></li>
+                    <li>
+                        
+                    </li>
+                </ul>
+
+            </div>
+            <div class="box" id="sair">
+                <a href="../PaginaLogin/index.html">Sair</a>
+            </div>
+        </nav>
+    </header>
+
+    <div class="container">
+        <header class="header-container">
+            <h1>Emissão de Nota Fiscal</h1>
+        </header>
+        <main>
+            <form class="invoice-form">
+                <div class="form-group">
+                    <label for="client-name">Nome do Cliente</label>
+                    <input type="text" id="client-name" required>
+                </div>
+                <div class="form-group">
+                    <label for="product-name">Nome do Produto</label>
+                    <input type="text" id="product-name" required>
+                </div>
+                <div class="form-group">
+                    <label for="quantity">Quantidade</label>
+                    <input type="number" id="quantity" required>
+                </div>
+                <div class="form-group">
+                    <label for="price">Preço Unitário</label>
+                    <input type="text" id="price" required>
+                </div>
+                <div class="form-group total">
+                    <label for="total">Total</label>
+                    <input type="text" id="total" readonly>
+                </div>
+                <div class="form-group">
+                    <button type="submit">Emitir</button>
+                </div>
+            </form>
+        </main>
+    </div>
+      
+
+</body>
+</html>

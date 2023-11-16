@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <title>Principal</title>
+</head>
+<body>
+
+    <header class="Header-Menu" href="styles.css">
+        <nav>
+            <div class="box" id="imagem">
+                <img src="logo1.png" alt="">
+            </div>
+            <div class="box" id="menu">
+                <ul>
+                    <li><a href="../Principal/index.html">Home</a></li>
+                    <li><a href="../TelaCliente/index.html">Cliente</a></li>
+                    <li class="dropdown">
+                        <a href="javascript:void(0)">Controle Financeiro</a>
+                        <div class="dropdown-content">
+                          <a href="../TelaNotaFiscal/index.html">Emitir Nota Fiscal</a>
+                          <a href="../Dashboard/index.html">Dashboard</a>
+                        </div>
+                    </li>
+                    <li><a href="../TelaPerfil/teste12.html">Perfil</a></li>
+                    <li>
+                        
+                    </li>
+                </ul>
+
+            </div>
+            <div class="box" id="sair">
+                <a href="../PaginaLogin/index.html">Sair</a>
+            </div>
+        </nav>
+    </header>
+
+    <div class="divPrincipal">
+
+        <div class="conteiner-centralizado">
+            
+            <div id="popup">
+                <div class="buttonfechar">
+                    <button id="fecharPopupBtn" onclick="closePopup()">Fechar</button>
+                </div>
+                <div class="formProjeto">
+                    <form action="/submit_project">
+                        <label for="pname"><p>Nome do Projeto</p></label>
+                        <input type="text" id="pname" name="nome" placeholder="Nome do projeto">
+            
+                        <label for="pstart"><p>Data de Início do Projeto</p></label>
+                        <input type="date" id="pstart" name="date">
+            
+                        <label for="porc"><p>Orçamento do Projeto</p></label>
+                        <input type="text" id="porc" name="valor" placeholder="R$ ">
+            
+                        <label for="pdesc"><p>Descrição do Projeto</p></label>
+                        <textarea id="fmessage" name="fmessage" rows="10" cols="30" placeholder="Breve Descrição do Projeto"></textarea>
+                        <button id="buttonCadProjeto">Cadastrar Projeto</button>
+                        
+                    </form>
+                </div>    
+            </div> 
+            <div class="dropdown-1">
+                <button class="dropdown-toggle" onclick="abrirPopUp()">Adicionar novo Projeto</button>
+            </div>   
+
+                <input type="text" id="emailInput" placeholder="Digite o e-mail aqui">
+                <button onclick="filtrarProjetos()"  id="button-filtrar">Filtrar</button>
+
+            
+        </div> 
+    
+        <div class="container-cards">
+    
+            <div class="card">
+                <h3>Projeto 01</h3>
+                <p>Sistema de Gestão Hospitalar</p>
+                <button id="btn-1">Detalhes do Projeto</button>
+    
+                <dialog>
+                    <p>Um Sistema de Gestão Hospitalar (SGH) é uma plataforma integrada de software projetada para otimizar
+                        e gerenciar eficientemente as operações em ambientes hospitalares. Esses sistemas são desenvolvidos
+                        para melhorar a eficiência, qualidade dos serviços prestados, controle de custos e fornecer suporte
+                        na tomada de decisões para profissionais de saúde e administradores.
+                    </p>
+                    <button>Fechar</button>
+                </dialog>
+    
+            </div>
+    
+            <div class="card">
+                <h3>Projeto 02</h3>
+                <p>Implementação de um Novo Servidor</p>
+                <button id="btn-2">Detalhes do Projeto</button>
+                <dialog id="dialog2">
+                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                        Ab minus, natus eveniet placeat ipsum doloribus quia at numquam tenetur, eos quaerat velit delectus,
+                        sequi possimus perspiciatis nobis.
+                        Omnis, architecto harum.
+                    </p>
+                    <button id="fecha01">Fechar</button>
+                </dialog>
+            </div>
+    
+            <div class="card">
+                <h3>Projeto 03</h3>
+                <p>Aplicar novo Design ao Sistema LocaWeb</p>
+                <button id="btn-1">Detalhes do Projeto</button>
+            </div>
+    
+            <div class="card">
+                <h3>Projeto 04</h3>
+                <p>Este é o card 4</p>
+                <button id="btn-1">Detalhes do Projeto</button>
+            </div>
+    
+            <div class="card">
+                <h3>Projeto 05</h3>
+                <p>Este é o card 5</p>
+                <button id="btn-1">Detalhes do Projeto</button>
+            </div>
+    
+            <div class="card">
+                <h3>Projeto 06</h3>
+                <p>Este é o card 6</p>
+                <button id="btn-1">Detalhes do Projeto</button>
+    
+            </div>
+    
+            <div class="card">
+                <h3>Projeto 07</h3>
+                <p>Este é o card 7</p>
+                <button id="btn-1">Detalhes do Projeto</button>
+            </div>
+    
+            <div class="card">
+                <h3>Projeto 08</h3>
+                <p>Este é o card 8</p>
+                <button id="btn-1">Detalhes do Projeto</button>
+            </div>
+    
+            <div class="card">
+                <h3>Projeto 09</h3>
+                <p>Este é o card 9</p>
+                <button id="btn-1">Detalhes do Projeto</button>
+            </div>
+    
+            <div class="card">
+                <h3>Projeto 10</h3>
+                <p>Este é o card 10</p>
+                <button id="btn-1">Detalhes do Projeto</button>
+            </div>
+    
+            <div class="card">
+                <h3>Projeto 11</h3>
+                <p>Este é o card 11</p>
+                <button id="btn-1">Detalhes do Projeto</button>
+            </div>
+    
+            <div class="card">
+                <h3>Projeto 12</h3>
+                <p>Este é o card 12</p>
+                <button id="btn-1">Detalhes do Projeto</button>
+            </div>
+    
+        </div>
+    </div>
+
+    </div>
+    
+<script src="script.js"></script>
+
+    
+    
+</body>
+</html>
