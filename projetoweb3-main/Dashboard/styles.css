@@ -1,0 +1,102 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Montserrat', sans-serif;
+  background-image: linear-gradient(to right, rgb(125, 111, 252),#783fb1, #612b97); 
+
+}
+
+header {
+    background-color: #070744;
+    color: #fff;
+    padding: 10px 0;
+    text-align: center;
+    box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.3);
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+}
+
+nav ul li {
+    margin-right: 20px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+}
+
+.content {
+    padding: 20px;
+}
+
+nav ul li a:hover {
+    color: rgb(110, 110, 165); 
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+  }
+  
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    min-width: 160px;
+    background-color: rgb(39, 53, 134);
+   
+    z-index: 1;
+    border-radius: 10px;
+  }
+  
+  .dropdown-content a {
+    color: white;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+  }
+  ul li div a{
+    font-size: 12px;
+  }
+  ul li div a:hover{
+    color: rgb(29, 14, 85);
+  }
+  .dropdown:hover .dropdown-content {display: block;}
+
+
+  img{
+    width: 100px;
+    
+  }
+  
+  .imagem{
+  
+    margin: 0;
+  }
+  
+  a{
+    text-decoration: none;
+    color: inherit;
+  }
+  
+  #sair{
+    margin-top: 2%;
+    margin-right: 10%;
+  }
+  #menu{
+    margin-top: 1.5%;
+    
+  }
+  #imagem{
+    margin-left: 5%;
+  }
+  
+  nav{
+    display: flex;
+    justify-content: space-between;
+  }

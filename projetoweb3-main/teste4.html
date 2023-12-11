@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            background-color: #111; /* Cor de fundo escura */
+            color: #fff; /* Cor do texto */
+            font-family: 'Courier New', monospace;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        /* Estilo para o texto */
+        #texto {
+            overflow: hidden; 
+            white-space: nowrap;
+            border-right: .15em solid #00ffcc; 
+            margin: 0 auto; 
+            font-size: 24px;
+            animation:
+                typing 6s steps(40, end) 1s,
+                blink-caret .75s step-end 5.25s both infinite;
+        }
+
+        /* Animação para simular a digitação */
+        @keyframes typing {
+            from { width: 0 }
+            to { width: 100% }
+        }
+
+        /* Animação para simular o cursor piscando */
+        @keyframes blink-caret {
+            from, to { border-color: transparent }
+            0%, 50%, 100% { border-color: #00ffcc; }
+        }
+    </style>
+</head>
+<body>
+    <div id="texto">Em um mundo de possibilidades digitais, desbloqueie as portas do seu universo :Faça login 
+    </div>
+
+    <script>
+        setTimeout(function() {
+            window.location.href = 'PaginaLogin/index.html'; 
+        }, 9000);
+    </script>
+
+</body>
+</html>
+

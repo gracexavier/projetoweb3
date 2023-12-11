@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles4.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Meu perfil</title>
+</head>
+
+<body>
+
+    <header class="Header-Menu" href="styles.css">
+        <nav>
+            <div class="box" id="imagem">
+                <img src="logo1.png" alt="">
+            </div>
+            <div class="box" id="menu">
+                <ul>
+                    <li><a href="../Principal/index.html">Home</a></li>
+                    
+                    <li><a href="../TelaCliente/index.html">Cliente</a></li>
+                    <li class="dropdown">
+                        <a href="javascript:void(0)">Controle Financeiro</a>
+                        <div class="dropdown-content">
+                          <a href="../TelaNotaFiscal/index.html">Emitir Nota Fiscal</a>
+                          <a href="../Dashboard/index.html">Dashboard</a>
+                        </div>
+                    </li>
+                    <li><a href="../TelaPerfil/teste12.html">Perfil</a></li>
+                    <li>
+                        
+                    </li>
+                </ul>
+
+            </div>
+            <div class="box" id="sair">
+                <a href="../PaginaLogin/index.html">Sair</a>
+            </div>
+        </nav>
+    </header>
+
+ <div class="main">   
+   <div class="upload">
+    <img src="noprofil.jpg" width= 100 height=100 alt="">
+    <div class="round">
+        <input type="file">
+        <i class="fa fa-upload"  style="color: #fff;"></i>
+    </div>
+   </div>
+
+   <div class="container">
+    <div class="section">
+        <h2>Dados do Usuário</h2>
+        <label for="email">Nome:</label>
+        <input type="email" id="nome" placeholder="Nome Completo">
+        <label for="email">E-mail:</label>
+        <input type="email" id="email" placeholder="Seu e-mail">
+
+        <label for="senha">Senha:</label>
+        <input type="password" id="senha" placeholder="Sua senha">
+    </div>
+    <button id="btnSalvar">Salvar</button>
+    <button id="btnEditar">Editar</button>
+
+    <div class="section">
+        <h2>Dados da Empresa</h2>
+        <label for="razaoSocial">Razão Social:</label>
+        <input type="text" id="razaoSocial" placeholder="Razão Social da Empresa">
+
+        <label for="cnpj">CNPJ:</label>
+        <input type="text" id="cnpj" placeholder="Número do CNPJ">
+
+        <label for="endereco">Endereço:</label>
+        <input type="text" id="endereco" placeholder="Endereço da Empresa">
+
+        <label for="telefone">Telefone:</label>
+        <input type="tel" id="telefone" placeholder="Número de Telefone">
+    </div>
+
+    <button id="btnSalvar">Salvar</button>
+    <button id="btnEditar">Editar</button>
+</div>
+</body>
+</html>
