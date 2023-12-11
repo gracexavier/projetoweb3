@@ -16,7 +16,7 @@ body {
 .main-login {
     width: 100vw;
     height: 100vh;
-    background-image: linear-gradient(to right, rgb(125, 111, 252), #783fb1, #612b97);
+    background-color: #003366;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -55,8 +55,8 @@ body {
     align-items: center;
     flex-direction: column;
     padding: 30px 35px;
-    background: #612b97;
-    border-radius: 20px;
+    background: #003366;
+    border-radius: 5px;
     box-shadow: 0px 5px 5px #191a21;
 }
 
@@ -78,9 +78,9 @@ body {
 .textfield > input {
     width: 100%;
     border: none;
-    border-radius: 10px;
+    border-radius: 2px;
     padding: 15px;
-    background: #783fb1;
+    background: #c5c4c5;
     color: #f8f8f2;
     font-size: 12pt;
     box-shadow: 0px 10px 40px #191a21;
@@ -89,12 +89,12 @@ body {
 }
 
 .textfield > label {
-    color: #f8f8f2;
+    color: #f2f8f5;
     margin-bottom: 10px;
 }
 
 .textfield > input::placeholder {
-    color: #f0ffff94;
+    color: #0d0e0e94;
 }
 
 .btn-login {
@@ -102,13 +102,13 @@ body {
     padding: 16px 0px;
     margin: 25px;
     border: none;
-    border-radius: 8px;
+    border-radius: 5px;
     outline: none;
     text-transform: uppercase;
     font-weight: 800;
     letter-spacing: 2px;
     color: #f5f2f8;
-    background: #2b134b;
+    background: #24754f;
     cursor: pointer;
     box-shadow: 0px 10px 40px -12px #00ff8052;
 }
