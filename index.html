@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+        @font-face {
+            font-family: 'Duarose';
+            src: url('Duarose-Regular.otf');
+        }
+        /* Aplicando a fonte Duarose ao corpo do documento */
+        body {
+            font-family: 'Duarose', sans-serif;
+            background-color: #FFFFFF; /* Branco */
+        }
+        /* Estilos para a navbar */
+        .navbar {
+            overflow: hidden;
+            background-color: #003366; /* Azul Escuro */
+        }
+        .navbar a {
+            float: left;
+            display: block;
+            color: #f2f2f2;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+        }
+        /* Estilos para a div centralizada */
+        .center-div {
+            width: 70%;
+            margin: auto;
+        }
+        /* Estilos para a tabela */
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+            color: #808080; /* Cinza */
+            background-color: #4D94FF; /* Azul Claro */
+        }
+        th, td {
+            padding: 15px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+        }
+        /* Estilos para os botões */
+        .btn {
+            background-color: #4CAF50;
+            color: white;
+            padding: 5px 12px;
+            margin: 8px 0;
+            border: none;
+            cursor: pointer;
+            width: 100%;
+            opacity: 0.9;
+        }
+        .btn:hover {
+            opacity: 1;
+        }
+        /* Estilos para o container dos botões */
+        .button-container {
+            display: flex;
+            justify-content: space-between;
+        }
+        /* Estilos para os ícones */
+        .fa {
+            padding: 10px;
+            font-size: 20px;
+            width: 30px;
+            text-align: center;
+            text-decoration: none;
+            margin: 5px 2px;
+        }
+        .fa:hover {
+            opacity: 0.7;
+        }
+        .fa-trash {
+            background: #f44336;
+            color: white;
+        }
+        .fa-edit {
+            background: #4CAF50;
+            color: white;
+        }
+        .fa-file {
+            background: #2196F3;
+            color: white;
+        }
+        /* Estilos para as legendas */
+        .tooltip {
+            position: relative;
+            display: inline-block;
+        }
+        .tooltip .tooltiptext {
+            visibility: hidden;
+            width: 120px;
+            background-color: #555;
+            color: #fff;
+            text-align: center;
+            border-radius: 6px;
+            padding: 5px 0;
+            position: absolute;
+            z-index: 1;
+            bottom: 100%;
+            left: 50%;
+            margin-left: -60px;
+            opacity: 0;
+            transition: opacity 0.3s;
+        }
+        .tooltip:hover .tooltiptext {
+            visibility: visible;
+            opacity: 1;
+        }
+        @media screen and (max-width: 600px) {
+            table, thead, tbody, th, td, tr {
+                display: block;
+            }
+            thead tr {
+                position: absolute;
+                top: -9999px;
+                left: -9999px;
+            }
+            tr { margin: 0 0 1rem 0; }
+            td {
+                border: none;
+                border-bottom: 1px solid #ddd;
+                position: relative;
+                padding-left: 50%;
+            }
+            td:before {
+                position: absolute;
+                top: 0;
+                left: 6px;
+                width: 45%;
+                padding-right: 10px;
+                white-space: nowrap;
+            }
+            td:nth-of-type(1):before { content: "Nome"; }
+            td:nth-of-type(2):before { content: "Idade"; }
+            td:nth-of-type(3):before { content: "Cidade"; }
+            td:nth-of-type(4):before { content: "Ações"; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navbar -->
+    <div class="navbar">
+      <a href="#home">Home</a>
+      <a href="#news">News</a>
+      <a href="#contact">Contact</a>
+    </div>
+    
+    <!-- Div centralizada -->
+    <div class="center-div">
+        <!-- Tabela -->
+        <table id="myTable">
+            <thead>
+                <tr>
+                    <th>Nome</th>
+                    <th>E-mail</th>
+                    <th>Telefone</th>
+                    <th>Ações</th>
+                </tr>
+            </thead>
+            <tbody>
+            </tbody>
+        </table>
+    </div>
+    
+    <script>
+        var data = [
+            { "nome": "João", "email": "joao@example.com", "telefone": "(11) 12345-6789" },
+            { "nome": "Maria", "email": "maria@example.com", "telefone": "(11) 98765-4321" },
+            { "nome": "Pedro", "email": "pedro@example.com", "telefone": "(11) 11111-1111" }
+        ];
+    
+        var table = document.getElementById('myTable').getElementsByTagName('tbody')[0];
+    
+        for(var i = 0; i < data.length; i++) {
+            var row = table.insertRow();
+            var cell1 = row.insertCell(0);
+            var cell2 = row.insertCell(1);
+            var cell3 = row.insertCell(2);
+            var cell4 = row.insertCell(3);
+            cell1.innerHTML = '<input type="text" id="nome'+i+'" value="'+data[i].nome+'" disabled>';
+            cell2.innerHTML = '<input type="text" id="email'+i+'" value="'+data[i].email+'" disabled>';
+            cell3.innerHTML = '<input type="text" id="telefone'+i+'" value="'+data[i].telefone+'" disabled>';
+            cell4.innerHTML = '<div class="button-container" id="buttonContainer'+i+'"><div class="tooltip"><a href="#" class="fa fa-trash"></a><span class="tooltiptext">Excluir</span></div><div class="tooltip"><a href="#" class="fa fa-edit" onclick="editRow('+i+')"></a><span class="tooltiptext">Editar</span></div><div class="tooltip"><a href="#" class="fa fa-file"></a><span class="tooltiptext">Emitir Nota Fiscal</span></div><div class="tooltip"><a href="#" class="fa fa-save" id="saveBtn'+i+'" style="display:none;" onclick="saveRow('+i+')"></a><span class="tooltiptext">Salvar</span></div><div class="tooltip"><a href="#" class="fa fa-times" id="cancelBtn'+i+'" style="display:none;" onclick="cancelEdit('+i+')"></a><span class="tooltiptext">Cancelar</span></div></div>';
+        }
+    
+        function editRow(i) {
+            document.getElementById('nome'+i).disabled = false;
+            document.getElementById('email'+i).disabled = false;
+            document.getElementById('telefone'+i).disabled = false;
+            document.getElementById('saveBtn'+i).style.display = "block";
+            document.getElementById('cancelBtn'+i).style.display = "block";
+            document.getElementById('buttonContainer'+i).style.opacity = 0.5;
+        }
+    
+        function saveRow(i) {
+            document.getElementById('nome'+i).disabled = true;
+            document.getElementById('email'+i).disabled = true;
+            document.getElementById('telefone'+i).disabled = true;
+            document.getElementById('saveBtn'+i).style.display = "none";
+            document.getElementById('cancelBtn'+i).style.display = "none";
+            document.getElementById('buttonContainer'+i).style.opacity = 1;
+        }
+    
+        function cancelEdit(i) {
+            document.getElementById('nome'+i).disabled = true;
+            document.getElementById('email'+i).disabled = true;
+            document.getElementById('telefone'+i).disabled = true;
+            document.getElementById('saveBtn'+i).style.display = "none";
+            document.getElementById('cancelBtn'+i).style.display = "none";
+            document.getElementById('buttonContainer'+i).style.opacity = 1;
+        }
+    </script>
+    
+    </body>
+</html>

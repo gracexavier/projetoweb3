@@ -2,12 +2,12 @@ body {
     margin: 0;
     padding: 0;
     font-family: 'Montserrat', sans-serif;
-    background-image: linear-gradient(to right, rgb(125, 111, 252),#783fb1, #612b97); 
+    background-color: #c5c4c4; 
   
   }
   
 header {
-  background-color: #070744;
+  background-color: #003366;
   color: #fff;
   padding: 10px 0;
   text-align: center;

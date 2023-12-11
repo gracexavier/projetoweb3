@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" type="text/css" href="styles.css">
     <title>Nota Fiscal</title>
 </head>
@@ -37,31 +38,71 @@
         </nav>
     </header>
 
-
-    <div class="divForm">
-        <form>
-            <h2>Cadastro de Clientes</h2>
-            <label for="nome">Nome:</label>
-            <input type="text" id="nome" name="nome" required>
-    
-            <label for="email">Email:</label>
-            <input type="email" id="email" name="email" required>
-    
-            <label for="telefone">Telefone:</label>
-            <input type="tel" id="telefone" name="telefone" required>
-    
-            <button type="submit">Cadastrar</button>
-            <button type="button" class="close-btn" onclick="fecharFormulario()">Fechar</button>
-        </form>
-    
+    <div class="center-div">
+        <!-- Tabela -->
+        <table id="myTable">
+            <thead>
+                <tr>
+                    <th>Nome</th>
+                    <th>E-mail</th>
+                    <th>Telefone</th>
+                    <th>Ações</th>
+                </tr>
+            </thead>
+            <tbody>
+            </tbody>
+        </table>
     </div>
+    
     <script>
-        function fecharFormulario() {
-            // Adicione aqui o código para fechar a tela ou esconder o formulário
-            alert("Formulário fechado!");
+        var data = [
+            { "nome": "João", "email": "joao@example.com", "telefone": "(11) 12345-6789" },
+            { "nome": "Maria", "email": "maria@example.com", "telefone": "(11) 98765-4321" },
+            { "nome": "Pedro", "email": "pedro@example.com", "telefone": "(11) 11111-1111" }
+        ];
+    
+        var table = document.getElementById('myTable').getElementsByTagName('tbody')[0];
+    
+        for(var i = 0; i < data.length; i++) {
+            var row = table.insertRow();
+            var cell1 = row.insertCell(0);
+            var cell2 = row.insertCell(1);
+            var cell3 = row.insertCell(2);
+            var cell4 = row.insertCell(3);
+            cell1.innerHTML = '<input type="text" id="nome'+i+'" value="'+data[i].nome+'" disabled>';
+            cell2.innerHTML = '<input type="text" id="email'+i+'" value="'+data[i].email+'" disabled>';
+            cell3.innerHTML = '<input type="text" id="telefone'+i+'" value="'+data[i].telefone+'" disabled>';
+            cell4.innerHTML = '<div class="button-container" id="buttonContainer'+i+'"><div class="tooltip"><a href="#" class="fa fa-trash"></a><span class="tooltiptext">Excluir</span></div><div class="tooltip"><a href="#" class="fa fa-edit" onclick="editRow('+i+')"></a><span class="tooltiptext">Editar</span></div><div class="tooltip"><a href="#" class="fa fa-file"></a><span class="tooltiptext">Emitir Nota Fiscal</span></div><div class="tooltip"><a href="#" class="fa fa-save" id="saveBtn'+i+'" style="display:none;" onclick="saveRow('+i+')"></a><span class="tooltiptext">Salvar</span></div><div class="tooltip"><a href="#" class="fa fa-times" id="cancelBtn'+i+'" style="display:none;" onclick="cancelEdit('+i+')"></a><span class="tooltiptext">Cancelar</span></div></div>';
+        }
+    
+        function editRow(i) {
+            document.getElementById('nome'+i).disabled = false;
+            document.getElementById('email'+i).disabled = false;
+            document.getElementById('telefone'+i).disabled = false;
+            document.getElementById('saveBtn'+i).style.display = "block";
+            document.getElementById('cancelBtn'+i).style.display = "block";
+            document.getElementById('buttonContainer'+i).style.opacity = 0.5;
+        }
+    
+        function saveRow(i) {
+            document.getElementById('nome'+i).disabled = true;
+            document.getElementById('email'+i).disabled = true;
+            document.getElementById('telefone'+i).disabled = true;
+            document.getElementById('saveBtn'+i).style.display = "none";
+            document.getElementById('cancelBtn'+i).style.display = "none";
+            document.getElementById('buttonContainer'+i).style.opacity = 1;
+        }
+    
+        function cancelEdit(i) {
+            document.getElementById('nome'+i).disabled = true;
+            document.getElementById('email'+i).disabled = true;
+            document.getElementById('telefone'+i).disabled = true;
+            document.getElementById('saveBtn'+i).style.display = "none";
+            document.getElementById('cancelBtn'+i).style.display = "none";
+            document.getElementById('buttonContainer'+i).style.opacity = 1;
         }
     </script>
-      
+    
 
 </body>
 </html>
